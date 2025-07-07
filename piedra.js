@@ -1,3 +1,5 @@
+//Funcion para optener la eleccion del computdor
+
 function getComputerChoice(){
     let choiceComputer = Math.floor(Math.random()*3) +1;
 
@@ -12,6 +14,8 @@ function getComputerChoice(){
     return choiceComputer;
 }
 
+
+//Funcion paara obetener la eleccin del usuario
 function getHumanChoice () {
     let choiceHuman = prompt('Digita una opcion entre "Piedra", "Papel" o "Tijera": ');
     
@@ -31,4 +35,7 @@ function getHumanChoice () {
     return choiceHuman;
 }
 
-console.log(getHumanChoice());
+//Variables de puntuacion de los jugadores.
+
+let humanScore = 0;
+let computerScore = 0;
