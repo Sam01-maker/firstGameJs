@@ -41,4 +41,9 @@ function getHumanChoice () {
 let humanScore = 0;
 let computerScore = 0;
 
-//Logica pra el primer juego
+//Logica para la primera ronda.
+
+function playRound(getComputerChoice, getHumanChoice){
+    
+
+}
