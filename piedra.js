@@ -43,7 +43,16 @@ let computerScore = 0;
 
 //Logica para la primera ronda.
 
-function playRound(getComputerChoice, getHumanChoice){
+
+function playRound(choiceHuman, choiceComputer){
+    choiceHuman = choiceHuman.toUpperCase();
+    choiceComputer = choiceComputer.toUpperCase();
+      
     
 
 }
+
+const  humanSelection = getHumanChoice();
+const  computerSelection = getComputerChoice();
+
+console.log(playRound(humanSelection, computerSelection));
