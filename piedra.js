@@ -13,17 +13,22 @@ function getComputerChoice(){
 }
 
 function getHumanChoice () {
-    let choiceHuman = prompt('Selecciona una opcion entre "Piedra", "Papel" o "Tijeras"');
+    let choiceHuman = prompt('Digita una opcion entre "Piedra", "Papel" o "Tijera": ');
     
-    if (choiceHuman === 'piedra' || 'Piedra' || 'PIEDRA'){
+    if (choiceHuman === 'piedra' || choiceHuman ===  'Piedra' || choiceHuman ===  'PIEDRA'){
         choiceHuman = 'Piedra';
-    } else if (choiceHuman === 'papel' || 'Papel' || 'PAPEL'){
+
+    } else if (choiceHuman === 'papel' || choiceHuman === 'Papel' || choiceHuman === 'PAPEL'){
         choiceHuman = 'Papel';
-    } else if (choiceHuman === 'tijera' || 'Tijera' || 'TIJERA'){
+
+    } else if (choiceHuman === 'tijera' || choiceHuman === 'Tijera' || choiceHuman ===  'TIJERA'){
         choiceHuman = 'Tijera';
+
     } else{
         choiceHuman = 'Seleccionar un valor valido';
     }
+
+    return choiceHuman;
 }
 
 console.log(getHumanChoice());
