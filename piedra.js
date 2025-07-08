@@ -1,3 +1,10 @@
+
+//Variables de puntuacion de los jugadores.
+
+let humanScore = 0;
+let computerScore = 0;
+
+
 //Funcion para optener la eleccion del computdor
 
 function getComputerChoice(){
@@ -11,46 +18,23 @@ function getComputerChoice(){
         choiceComputer= 'Tijera';
     }
 
-    return choiceComputer.toUpperCase();
+    return choiceComputer;
 }
 
 
 //Funcion paara obetener la eleccin del usuario
 function getHumanChoice () {
-    let choiceHuman = prompt('Digita una opcion entre "Piedra", "Papel" o "Tijera": ').toUpperCase();
-    
-    if (choiceHuman === 'PIEDRA'){
-        choiceHuman = 'Piedra';
+    let choiceHuman = prompt('Digita una opcion entre "Piedra", "Papel" o "Tijera": ');
 
-    } else if (choiceHuman === 'PAPEL'){
-        choiceHuman = 'Papel';
-
-    } else if (choiceHuman === 'TIJERA'){
-        choiceHuman = 'Tijera';
-
-    } else{
-        choiceHuman = 'Seleccionar un valor valido';
-    }
-
-    return choiceHuman.toUpperCase();
+    return choiceHuman;
 }
 
 
-//Variables de puntuacion de los jugadores.
-
-let humanScore = 0;
-let computerScore = 0;
-
-
-//Logica para la primera ronda.
-
-
+//Funcion para la primera ronda del juego
 function playRound(choiceHuman, choiceComputer){
     choiceHuman = choiceHuman.toUpperCase();
     choiceComputer = choiceComputer.toUpperCase();
       
-    //codigo condicional con algoritmo del juego 
-
     if (choiceHuman === choiceComputer){
         return console.log('Han elejido el mismo objeto, Intenta de nuevo');
     } else if (choiceHuman === "PIEDRA" && choiceComputer === "TIJERA"){
@@ -77,11 +61,13 @@ function playRound(choiceHuman, choiceComputer){
         ++computerScore;
         return console.log(`Lo siento "Piedra gana a Papel"`);
     
-    } 
+    } else{
+       return console.log('Ingresaste un valor invalido, intenta de nuevo');
+    }
 }
 
-// const  humanSelection = getHumanChoice();
-// const  computerSelection = getComputerChoice();
+
+
 
 
 //Funcion para la logica de todo el juego.
